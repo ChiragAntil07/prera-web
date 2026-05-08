@@ -21,7 +21,7 @@ export default function Footer(){
             <h2 style={{color:'white'}}>Contact</h2>
             <p>team.prera@gmail.com</p>
             <p>+91 7404972825</p>
-            <div style={{ display: 'flex', gap: '15px', marginTop: '15px', fontSize: '24px' }}>
+            <div style={{ display: 'flex', gap: '15px', marginTop: '18px', fontSize: '24px' }}>
                 <a href="https://www.linkedin.com/company/preraofficial/?viewAsMember=true" style={{ color: 'inherit', textDecoration: 'none' }} target='_blank'><FaLinkedin /></a>
                 <a href="https://www.instagram.com/prera_official?igsh=emNlb3UyNDRzZmdx" style={{ color: 'inherit', textDecoration: 'none' }} target='_blank'><FaInstagram /></a>
             </div>
