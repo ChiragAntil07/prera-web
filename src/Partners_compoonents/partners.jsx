@@ -1,6 +1,8 @@
 import './Partners.css';
 import React from "react";
 import Nav from '../Navbar.jsx';
+
+
 import redbull from '../assets/partners/redbill.png';
 import canva from '../assets/partners/canva.png';
 import axure from '../assets/partners/axure.png';
@@ -14,11 +16,25 @@ import unstop from '../assets/partners/unstop.png';
 import dominos from '../assets/partners/dominos.png';
 import unibazar from '../assets/partners/unibazar.png';
 
-
 function Partners() {
+
+  const partners = [
+    { src: redbull, name: "Red Bull" },
+    { src: canva, name: "Canva" },
+    { src: axure, name: "Axure" },
+    { src: denver, name: "Denver" },
+    { src: dell, name: "Dell" },
+    { src: truescholar, name: "TrueScholar" },
+    { src: patym, name: "Patym" },
+    { src: hell, name: "Hell" },
+    { src: abhibus, name: "Abhibus" },
+    { src: unstop, name: "Unstop" },
+    { src: dominos, name: "Dominos" },
+    { src: unibazar, name: "Unibazar" },
+  ];
+
   return (
     <div className="partnerPage">
-
       <div className="partnerTop">
         <h1 className="mainHeading">
           OUR <span>PARTNERS</span>
@@ -28,22 +44,14 @@ function Partners() {
           experiences and meaningful partnerships.
         </p>
       </div>
+
       <div className="logoGrid">
-        <div className="logoBox"><img src={redbull} alt="Red Bull" /></div>
-        <div className="logoBox"><img src={canva} alt="Canva" /></div>
-        <div className="logoBox"><img src={axure} alt="Axure" /></div>
-        <div className="logoBox"><img src={denver} alt="Denver" /></div>
-        <div className="logoBox"><img src={dell} alt="Dell" /></div>
-        <div className="logoBox"><img src={truescholar} alt="TrueScholar" /></div>
-        <div className="logoBox"><img src={patym} alt="Patym" /></div>
-        <div className="logoBox"><img src={hell} alt="Hell" /></div>
-        <div className="logoBox"><img src={abhibus} alt="Abhibus" /></div>
-        <div className="logoBox"><img src={unstop} alt="Unstop" /></div>
-        <div className="logoBox"><img src={dominos} alt="Dominos" /></div>
-        <div className="logoBox"><img src={unibazar} alt="Unibazar" /></div>
-
+        {partners.map((partner, index) => (
+          <div key={index} className="logoBox">
+            <img src={partner.src} alt={partner.name} />
+          </div>
+        ))}
       </div>
-
     </div>
   );
 }
